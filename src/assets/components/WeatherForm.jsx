@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { IoLocationSharp } from "react-icons/io5"
 
 function WeatherForm({ onChangeCity }) {
 
@@ -21,7 +22,7 @@ function WeatherForm({ onChangeCity }) {
         <form onSubmit={handleSubmit}>
             <div className="input-group flex-nowrap">
 
-                <span className="input-group-text" id="addon-wrapping">icon location</span>
+                <span className="input-group-text" id="addon-wrapping"><IoLocationSharp /></span>
                 <input className="form-control" type="text" placeholder="Enter city name" onChange={onChange} aria-describedby="addon-wrapping" />
                 <button type="button" className="btn btn-info">Get Weather</button>
 

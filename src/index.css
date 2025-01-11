@@ -17,6 +17,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
+  background-color: blueviolet;
   
 }
 
@@ -24,4 +25,7 @@ h1 {
   font-size: 3.2em;
 }
 
+.input-group {
+  color: green;
+}
 
