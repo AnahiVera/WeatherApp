@@ -3,7 +3,7 @@ import './App.css'
 import WeatherApp from './assets/components/weatherApp'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>

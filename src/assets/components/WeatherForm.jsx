@@ -7,14 +7,15 @@ function WeatherForm({ onChangeCity }) {
 
     function onChange(e) {
         const value = e.target.value;
-        if (value === '') {
+        if (value !== "") {
             setCity(value);
+        }else{
+            console.log('No city entered');
         }
     }
 
     function handleSubmit(e) {
         e.preventDefault();
-
         onChangeCity(city);
     }
 
@@ -24,7 +25,7 @@ function WeatherForm({ onChangeCity }) {
 
                 <span className="input-group-text" id="addon-wrapping"><IoLocationSharp /></span>
                 <input className="form-control" type="text" placeholder="Enter city name" onChange={onChange} aria-describedby="addon-wrapping" />
-                <button type="button" className="btn btn-info">Get Weather</button>
+                
 
             </div>
         </form>
