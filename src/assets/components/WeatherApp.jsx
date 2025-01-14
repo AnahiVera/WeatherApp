@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import WeatherForm from "./weatherForm";
+import InfoCard from "./InfoCard";
 
 
 function WeatherApp() {
 
   const [weather, setWeather] = useState(null);
 
-   
-
+  
   async function loadInformation(city ='London') {
 
     try {
@@ -34,14 +34,16 @@ function WeatherApp() {
     loadInformation();
    }, []) 
   
+   useEffect(() => { 
+    document.title = `Weather App ${weather?.location?.name ?? ''}`;
+   }, [weather]) 
 
   return (
-    <div>
+    <div className="container">
       <h1>Weather App</h1>
       <WeatherForm onChangeCity={handleChangeCity} />
-      <div>Information</div>
-      <div>{weather?.location.name}</div>
-      <div>Temperature C° {weather?.current?.temp_c}</div>
+             
+      <InfoCard weather={weather}/>
     </div>
 
   );
