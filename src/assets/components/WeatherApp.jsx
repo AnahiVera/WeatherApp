@@ -45,11 +45,11 @@ function WeatherApp() {
       <WeatherForm onChangeCity={handleChangeCity} />
 
       <div className="row">  
-        <div className="column col-sm-12 col-6">
+        <div className="column col-sm-12 col-md-6">
         <InfoCard weather={weather}/>
         </div>
 
-        <div className="column col-sm-12 col-6">
+        <div className="column col-sm-12 col-md-6">
         <MapCard weather={weather}/>
         </div>
       </div>
