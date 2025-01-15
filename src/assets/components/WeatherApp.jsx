@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import WeatherForm from "./weatherForm";
 import InfoCard from "./InfoCard";
+import MapCard from "./MapCard";
 
 
 function WeatherApp() {
@@ -42,8 +43,20 @@ function WeatherApp() {
     <div className="container">
       <h1>Weather App</h1>
       <WeatherForm onChangeCity={handleChangeCity} />
+
+      <div className="row">  
+        <div className="column col-sm-12 col-6">
+        <InfoCard weather={weather}/>
+        </div>
+
+        <div className="column col-sm-12 col-6">
+        <MapCard weather={weather}/>
+        </div>
+      </div>
              
-      <InfoCard weather={weather}/>
+      
+
+      
     </div>
 
   );
