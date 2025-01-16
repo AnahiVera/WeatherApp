@@ -27,6 +27,9 @@ function WeatherApp() {
   }
 
   function handleChangeCity(city) {
+    if (!city) {
+      city = 'London';
+    }
     setWeather(null);
     loadInformation(city);
   }
@@ -40,8 +43,8 @@ function WeatherApp() {
    }, [weather]) 
 
   return (
-    <div className="container ">
-      <h1>Your Weather here!</h1>
+    <div className="container">
+      <h1>Look your Weather here!</h1>
       <WeatherForm onChangeCity={handleChangeCity} />
 
       <div className="row">  
@@ -53,9 +56,6 @@ function WeatherApp() {
         <MapCard weather={weather}/>
         </div>
       </div>
-             
-      
-
       
     </div>
 
