@@ -40,8 +40,8 @@ function WeatherApp() {
    }, [weather]) 
 
   return (
-    <div className="container">
-      <h1>Weather App</h1>
+    <div className="container ">
+      <h1>Your Weather here!</h1>
       <WeatherForm onChangeCity={handleChangeCity} />
 
       <div className="row">  

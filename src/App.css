@@ -3,15 +3,15 @@ body {
     display: flex;
     place-items: center;
     justify-content: center;
-    background-color: rgb(157, 70, 184);
+    background-color: rgb(101, 29, 122);
 
 }
 
 h1 {
     font-size: 2.6em;
-    justify-content: center;
-
+    align-self: center;
 }
+
 
 .container {
     width: 100%;
@@ -48,22 +48,26 @@ h1 {
     display: flex;
     flex-direction: row;
     gap: 5px;
-    align-self: center;
+    justify-content: space-between;
 }
 
 .icon {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: rgb(59, 111, 170);
+    background-color: rgb(40, 84, 134);
     box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
     
 }
 
+.cardInfo p {
+    text-align: end;
+}
+
 .cardInfo h5 {
     text-align: center;
-    color: black;
-
+    font-size: 1.6em;
+    color: white;
 }
 
 .card {
@@ -91,7 +95,7 @@ h1 {
     background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
     height: 130%;
     animation: rotBGimg 3s linear infinite;
-    transition: all 0.2s linear;
+    transition: all 1.2s linear;
   }
   
   @keyframes rotBGimg {
@@ -100,7 +104,7 @@ h1 {
     }
   
     to {
-      transform: rotate(360deg);
+      transform: rotate(180deg);
     }
   }
   
@@ -113,7 +117,7 @@ h1 {
     border-radius: 15px;
   }  
   .card:hover:before {
-    background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
-    animation: rotBGimg 3.5s linear infinite;
+    background-image: linear-gradient(180deg, rgb(81, 255, 0), rgb(128, 0, 43));
+    animation: rotBGimg 4.5s linear infinite;
   } 
   
