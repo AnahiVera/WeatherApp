@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import WeatherForm from "./weatherForm";
-import InfoCard from "./InfoCard";
-import MapCard from "./MapCard";
+import InfoCard from "./infoCard";
+import MapCard from "./mapCard";
 
 
 function WeatherApp() {
