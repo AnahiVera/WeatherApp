@@ -9,20 +9,22 @@ function WeatherApp() {
   const [weather, setWeather] = useState(null);
 
   
-  async function loadInformation(city ='London') {
-
+  async function loadInformation(city = 'London') {
     try {
-      const request = await fetch(
+      const response = await fetch(
         `${import.meta.env.VITE_REACT_APP_URL}&key=${import.meta.env.VITE_REACT_APP_KEY}&q=${city}`
-      )
-
-      const json = await request.json();
-
-      setWeather(json);
-      console.log(json);
-
+      );
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+  
+      const data = await response.json();
+      setWeather(data);
+      console.log(data);
+  
     } catch (error) {
-      console.error(error, 'Error');
+      console.error("Error fetching weather data:", error);
     }
   }
 
